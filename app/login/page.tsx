@@ -5,32 +5,36 @@ import {
     Card,
     CardBody,
     CardFooter,
-    CardHeader,
+    CardHeader, Center,
     FormControl,
     FormLabel,
     Heading,
-    Input, Spinner
+    Input, Spinner, Stack
 } from "@chakra-ui/react";
+import {Link} from "@chakra-ui/next-js";
 export default function LoginPage() {
 
     return(
-        <Card bg="white" w={"50em"}>
+        <Card bg="gray.50" w={"30em"}>
             <form>
                 <CardHeader>
-                    <Heading>LoginForm</Heading>
+                    <Heading>Please Login</Heading>
                 </CardHeader>
-                <CardBody>
-                    <FormControl>
-                        <FormLabel>UserName</FormLabel>
-                        <Input placeholder={"User name"}></Input>
-                    </FormControl>
-                    <FormControl>
-                        <FormLabel>UserName</FormLabel>
-                        <Input placeholder={"User name"}></Input>
-                    </FormControl>
+                <CardBody rowGap={"5px"}>
+                    <Stack spacing={5}>
+                        <FormControl>
+                            <FormLabel>Username</FormLabel>
+                            <Input placeholder={"Username"}></Input>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel>Password</FormLabel>
+                            <Input placeholder={"Password"} type={"password"}></Input>
+                        </FormControl>
+                    </Stack>
                 </CardBody>
-                <CardFooter>
-                    <Button>Submit</Button>
+                <CardFooter alignItems={"center"} flexDirection={"column"}>
+                    <Button bg={"green.100"} color={"green"} w={"70%"}>Login</Button>
+                    <Link py={"5px"} href={"/register"}>Or register an account</Link>
                 </CardFooter>
             </form>
     </Card>
