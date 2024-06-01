@@ -1,14 +1,11 @@
 'use client'
 
 import {Box, Button, FormControl, FormLabel, Input, Stack} from "@chakra-ui/react";
-import {useRouter} from "next/navigation";
 import {useForm} from "react-hook-form";
 import {submitRegisterFormAction} from "@/app/register/registerFormScripts";
 import {registerForm} from "@/app/_utils/formTypes";
 
 export default function RegisterPage() {
-
-    const router = useRouter();
 
     const onSubmit = (values: registerForm) => {
         submitRegisterFormAction(values).then((res) => {
@@ -16,7 +13,7 @@ export default function RegisterPage() {
         })
     }
 
-    const {register, handleSubmit, formState: {errors}} = useForm<registerForm>()
+    const {register, handleSubmit} = useForm<registerForm>()
 
     return (
         <Box shadow="lg" borderRadius="lg" borderWidth="1px" borderColor="gray.300">
