@@ -1,6 +1,6 @@
 'use client'
 
-import {Button, Flex} from "@chakra-ui/react";
+import {Button} from "@chakra-ui/react";
 import {deactivateAccountAction} from "@/app/accounts/active/deactivateAccount";
 import {useRouter} from "next/navigation";
 
@@ -14,7 +14,7 @@ export default function DeactivateAccountButton({id}: deactivateAccountButtonPro
 
     function deactivateAccount() {
         if (id) {
-            deactivateAccountAction(id).then(data => {
+            deactivateAccountAction(id).then(() => {
                 router.refresh()
             });
         }

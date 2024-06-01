@@ -5,11 +5,11 @@ import {
     Card,
     CardBody,
     CardFooter,
-    CardHeader, Center,
+    CardHeader,
     FormControl,
     FormLabel,
     Heading,
-    Input, Spinner, Stack
+    Input, Stack
 } from "@chakra-ui/react";
 import {Link} from "@chakra-ui/next-js";
 export default function LoginPage() {

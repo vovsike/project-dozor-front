@@ -5,8 +5,6 @@ import {cookies} from "next/headers";
 
 export default async function activeAccounts () {
 
-    const clientCookies = cookies()
-
     const accounts = await getAccountsActive();
 
     return (
