@@ -1,21 +1,12 @@
 'use client'
 
 import React from "react";
-import {ChakraProvider, extendTheme} from "@chakra-ui/react";
-
-const theme = extendTheme({
-    styles: {
-        global: {
-            body :{
-                bg: "cyan.100"
-            }
-        }
-    }
-})
+import {ChakraProvider} from "@chakra-ui/react";
+import customTheme from "@/app/theme";
 
 export const Providers = ({children} : {children: React.ReactNode}) => {
     return (
-        <ChakraProvider theme={theme}>
+        <ChakraProvider theme={customTheme}>
             {children}
         </ChakraProvider>
     )
