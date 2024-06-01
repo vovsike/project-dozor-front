@@ -11,7 +11,7 @@ export async function deactivateAccountAction(id: number) {
 
     console.log("baseUrl is: ", client.getConfig().baseUrl)
 
-    const res=  await patchAccountsById({
+    const res = await patchAccountsById({
         headers: {
             "content-type": 'application/merge-patch+json'
         },
