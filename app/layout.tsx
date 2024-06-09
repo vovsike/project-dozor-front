@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 createClient({
-    baseUrl:"process.env.API_BASE",
+    baseUrl: process.env.API_BASE,
     cache: "no-cache"
 })
 

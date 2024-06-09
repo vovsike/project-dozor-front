@@ -4,12 +4,14 @@ import {Box, Button, FormControl, FormLabel, Input, Stack} from "@chakra-ui/reac
 import {useForm} from "react-hook-form";
 import {submitRegisterFormAction} from "@/app/register/registerFormScripts";
 import {registerForm} from "@/app/_utils/formTypes";
+import {useRouter} from "next/navigation";
 
 export default function RegisterPage() {
 
+    const router = useRouter()
     const onSubmit = (values: registerForm) => {
         submitRegisterFormAction(values).then((res) => {
-            console.log(res)
+            router.push("/accounts/active")
         })
     }
 

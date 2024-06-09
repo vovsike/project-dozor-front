@@ -25,7 +25,6 @@ export default async function activeAccounts () {
                 </Table>
             </TableContainer>
             <Link p={"5px"} as={NextLink} href={"/register"} >Or register an account</Link>
-
         </>
 
     );

@@ -1,7 +1,12 @@
-const Home = async () => {
+'use client'
+
+const Home = () => {
+
 
     return (
-        <></>
+        <>
+            <h1></h1>
+        </>
     )
 }
 
